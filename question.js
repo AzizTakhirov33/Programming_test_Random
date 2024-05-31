@@ -217,8 +217,8 @@ const quiz = [
         img: "Question/19/19.jpg",
         answer: 0,
         options: [
-            { text: '1 2', img: '' },
             { text: '2 1', img: '' },
+            { text: '1 2', img: '' },
             { text: '0 0', img: '' },
             { text: '1 0', img: '' }
         ],
