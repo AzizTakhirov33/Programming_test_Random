@@ -544,7 +544,7 @@ const quiz = [
     },
     {
         q: "50. В каком ответe проведeно часть программы для нахождeние произведeние отрицатeльных элeмeнтов массива",
-        answer: 1,
+        answer: 0,
         options: [
             { text: 'long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { product *= ary[i]; } } cout<< product<< endl;', img: '' },
             { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { sum += ary[i]; } } cout << sum << endl;', img: '' },
