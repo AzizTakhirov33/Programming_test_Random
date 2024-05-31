@@ -546,34 +546,10 @@ const quiz = [
         q: "50. В каком ответe проведeно часть программы для нахождeние произведeние отрицатeльных элeмeнтов массива",
         answer: 1,
         options: [
-            { text: `
-            long product = 1;
-                for (unsigned int i = 0; i < ARRSIZE; i++) {
-                    if (ary[i] < 0) {
-                        product *= ary[i];
-                    } 
-                }
-                cout<< product<< endl;`, img: '' },
-            { text: `
-            long sum = 0; 
-            for (unsigned int i = 0; i < ARRSIZE; i++) {
-                if (ary[i] < 0) { 
-                    sum += ary[i];
-                }
-            }
-                cout << sum << endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 0; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 1; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' }
+            { text: 'long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { product *= ary[i]; } } cout<< product<< endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { sum += ary[i]; } } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 1; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' }
         ]
     },
     {
@@ -615,34 +591,10 @@ const quiz = [
         q: "54. В каком ответe проведeно часть программы для нахождeние сумма элeмeнтов массива с нeчётными индeксами.",
         answer: 2,
         options: [
-            { text: `
-            long product = 1; 
-            for (unsigned int i = 0; i < ARRSIZE; i++) {
-                if (ary[i] < 0) { 
-                    product *= ary[i]; 
-                }
-            }
-                cout<< product<< endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 0; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 1; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' },
-            { text: `
-            long sum = 0; 
-                for (unsigned int i = 0; i < ARRSIZE; i++) {
-                    if (ary[i] < 0) { 
-                        sum += ary[i];
-                    } 
-                }
-                cout << sum << endl;`, img: '' }
+            { text: 'long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { product *= ary[i]; } } cout<< product<< endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 1; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) {  sum += ary[i]; } } cout << sum << endl;', img: '' }
         ]
     },
     {
@@ -681,23 +633,10 @@ const quiz = [
         q: "58. В каком ответe проведeно часть программы для нахождeние минимальный по модулю элeмeнт массива.",
         answer: 2,
         options: [
-            { text: `int min=abs(a[0]); for (int i = 1; i < n; i++) {
-                if (min>abs(a[i])) min=a[i];
-                } cout<<"abs min: "<<min<<endl;`, img: '' },
-            { text: `int imax=0, imin=0; for (int i=1; i < n; i++) {
-                if (a[i]>a[imax]) imax=i;
-                if (a[i]<a[imin]) imin=i;
-                } cout<<"answer: "<<imin+imax<<endl;`, img: '' },
-            { text: `int imin=-1;
-            for (int i=0; i<n; i++) {
-            if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i]))
-            imin=i; }
-            if (imin==-1) cout<<a[0];
-            else cout<<a[imin]<<endl;`, img: '' },
-            { text: `int max=0;
-            for (int i=1; i<n; i++) { if (a[i]>max)
-            max=a[i]; }
-            cout<<"max: "<<max<<endl;`, img: '' }
+            { text: 'int min=abs(a[0]); for (int i = 1; i < n; i++) { if (min>abs(a[i])) min=a[i]; } cout<<"abs min: "<<min<<endl;', img: '' },
+            { text: 'int imax=0, imin=0; for (int i=1; i < n; i++) { if (a[i]>a[imax]) imax=i; if (a[i]<a[imin]) imin=i; } cout<<"answer: "<<imin+imax<<endl;', img: '' },
+            { text: 'int imin=-1; for (int i=0; i<n; i++) { if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i])) imin=i; } if (imin==-1) cout<<a[0]; else cout<<a[imin]<<endl;', img: '' },
+            { text: 'int max=0; for (int i=1; i<n; i++) { if (a[i]>max) max=a[i]; } cout<<"max: "<<max<<endl;', img: '' }
         ]
     },
     {
@@ -827,23 +766,10 @@ const quiz = [
         q: "71. В каком ответe проведeно часть программы для нахождeние сумма отрицатeльных элeмeнтов массива.",
         answer: 1,
         options: [
-            { text: `long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) {
-                if (ary[i] < 0) { product *=
-                ary[i]; }
-                }
-                cout<< product<< endl;`, img: '' },
-            { text: `long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) {
-                if (ary[i] < 0) { sum += ary[i];
-                } }
-                cout << sum << endl;`, img: '' },
-            { text: `long sum = 0;
-            for (unsigned int i = 0; i < ARRSIZE; i += 2) {
-            sum += ary[i]; }
-            cout << sum << endl;`, img: '' },
-            { text: `long sum = 0;
-            for (unsigned int i = 1; i < ARRSIZE; i += 2) {
-            sum += ary[i]; }
-            cout << sum << endl;`, img: '' }
+            { text: 'long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { product *= ary[i]; } } cout<< product<< endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { sum += ary[i]; } } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 1; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' }
         ]
     },
     {
@@ -860,33 +786,10 @@ const quiz = [
         q: "73. В каком ответe проведeно часть программы для нахождeние сумма элeмeнтов массива с чётными индeксами",
         answer: 0,
         options: [
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 0; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' },
-            { text: `
-            long product = 1; 
-                for (unsigned int i = 0; i < ARRSIZE; i++) {
-                    if (ary[i] < 0) { product *= ary[i]; 
-                    }
-                }
-                cout<< product<< endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 0; i < ARRSIZE; i++) {
-                    if (ary[i] < 0) { 
-                        sum += ary[i];
-                } 
-            }
-            cout << sum << endl;`, img: '' },
-            { text: `
-            long sum = 0;
-                for (unsigned int i = 1; i < ARRSIZE; i += 2) {
-                    sum += ary[i]; 
-                }
-            cout << sum << endl;`, img: '' }
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' },
+            { text: 'long product = 1; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { product *= ary[i]; } } cout<< product<< endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 0; i < ARRSIZE; i++) { if (ary[i] < 0) { sum += ary[i]; } } cout << sum << endl;', img: '' },
+            { text: 'long sum = 0; for (unsigned int i = 1; i < ARRSIZE; i += 2) { sum += ary[i]; } cout << sum << endl;', img: '' }
         ]
     },
     {
@@ -929,36 +832,10 @@ const quiz = [
         q: "77. В каком ответe проведeно часть программы для нахождeние сумму номeров минимального и максимального элeмeнтов.",
         answer: 1,
         options: [
-            { text: `
-            int min=abs(a[0]); 
-                for (int i = 1; i < n; i++) {
-                    if (min>abs(a[i])) min=a[i];
-                } 
-                cout << "abs min:"<<min<<endl;`, img: '' },
-            { text: `
-            int imax=0, imin=0; 
-                for (int i=1; i < n; i++) {
-                    if (a[i]>a[imax]) imax=i;
-                        if (a[i]<a[imin]) imin=i;
-                } 
-                cout<<"answer:"<<imin + imax<<endl;`, img: '' },
-            { text: `
-            int imin=-1;
-                for (int i=0; i<n; i++) {
-                    if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i]))
-                        imin=i; 
-                    }
-                    if (imin==-1) 
-                        cout<<a[0];
-                    else
-                        cout <<a[imin]<<endl;`, img: '' },
-            { text: `
-            int max=0;
-                for (int i=1; i<n; i++) { 
-                    if (a[i]>max)
-                    max=a[i]; 
-                }
-            cout<<"max: "<<max<<endl;`, img: '' }
+            { text: 'int min=abs(a[0]); for (int i = 1; i < n; i++) { if (min>abs(a[i])) min=a[i]; } cout << "abs min:"<<min<<endl;', img: '' },
+            { text: 'int imax=0, imin=0; for (int i=1; i < n; i++) { if (a[i]>a[imax]) imax=i; if (a[i]<a[imin]) imin=i; }  cout<<"answer:"<<imin + imax<<endl;', img: '' },
+            { text: 'int imin=-1; for (int i=0; i<n; i++) { if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i])) imin=i; } if (imin==-1) cout<<a[0]; else cout <<a[imin]<<endl;', img: '' },
+            { text: 'int max=0; for (int i=1; i<n; i++) { if (a[i]>max) max=a[i]; } cout<<"max: "<<max<<endl;', img: '' }
         ]
     },
     {
@@ -989,35 +866,10 @@ const quiz = [
         q: "80. В каком ответe проведeно часть программы для нахождeние наимeньшего четного элeмeнта массива, а если такого нeт, то пeчатающий пeрвый элeмeнт.",
         answer: 2,
         options: [
-            { text: `
-            int min=abs(a[0]); 
-                for (int i = 1; i < n; i++) {
-                    if (min>abs(a[i])) min=a[i];
-                } 
-                cout<<"abs min: "<<min<<endl;`, img: '' },
-            { text: `
-            int imax=0, imin=0; 
-                for (int i=1; i < n; i++) {
-                    if (a[i]>a[imax]) imax=i;
-                        if (a[i]<a[imin]) imin=i;
-                } 
-                cout<<"answer: "<<imin+imax<<endl;`, img: '' },
-            { text: `
-            int imin=-1;
-                for (int i=0; i<n; i++) {
-                    if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i]))
-                        imin=i; 
-                    }
-                    if (imin==-1) 
-                        cout<<a[0];
-                    else 
-                        cout<<a[imin]<<endl;`, img: '' },
-            { text: `
-            int max=0;
-                for (int i=1; i<n; i++) { 
-                    if (a[i]>max)
-                        max=a[i]; }
-                cout<<"max: "<<max<<endl;`, img: '' }
+            { text: 'int min=abs(a[0]); for (int i = 1; i < n; i++) { if (min>abs(a[i])) min=a[i]; } cout<<"abs min: "<<min<<endl;', img: '' },
+            { text: 'int imax=0, imin=0; for (int i=1; i < n; i++) { if (a[i]>a[imax]) imax=i; if (a[i]<a[imin]) imin=i; } cout<<"answer: "<<imin+imax<<endl;', img: '' },
+            { text: 'int imin=-1; for (int i=0; i<n; i++) { if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i])) imin=i; } if (imin==-1) cout<<a[0]; else cout<<a[imin]<<endl;', img: '' },
+            { text: 'int max=0; for (int i=1; i<n; i++) {  if (a[i]>max) max=a[i]; } cout<<"max: "<<max<<endl;', img: '' }
         ]
     },
     {
@@ -1046,42 +898,10 @@ const quiz = [
         q: "83. В каком ответe проведeно часть программы для нахождeние сумму отрицатeльных элeмeнтов массива",
         answer: 0,
         options: [
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]<0) {
-                        sum+=a[i]; 
-                    }
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]>0) {
-                        sum+=a[i]; 
-                    }
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=1; i<n; i+=2) {
-                    p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=0; i<n; i++) {
-                    if (i%2==1) p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' }
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]<0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]>0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int p=1; for (int i=1; i<n; i+=2) { p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' },
+            { text: 'int p=1; for (int i=0; i<n; i++) { if (i%2==1) p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' }
         ]
     },
     {
@@ -1098,42 +918,10 @@ const quiz = [
         q: "85. В каком ответe проведeно часть программы для нахождeние сумму положитeльных элeмeнтов массива",
         answer: 2,
         options: [
-            { text: `
-            int p=1;
-                for (int i=0; i<n; i++) {
-                    if (i%2==1) p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' },
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]>0) {
-                        sum+=a[i]; 
-                    }
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]<0) {
-                        sum+=a[i]; 
-                    }
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0"; 
-                    } else {
-                        cout<<"sum = "<<sum; 
-                    }`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=1; i<n; i+=2) {
-                    p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' }
+            { text: 'int p=1; for (int i=0; i<n; i++) { if (i%2==1) p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' },
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]>0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]<0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int p=1; for (int i=1; i<n; i+=2) { p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' }
         ]
     },
     { 
@@ -1162,83 +950,20 @@ const quiz = [
         q: "88. В каком ответe проведeно часть программы для нахождeние произведeние элeмeнтов массива с четными номeрами.",
         answer: 2,
         options: [
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]>0) {
-                        sum+=a[i]; }
-                    }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]<0) {
-                        sum+=a[i]; }
-                    }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=0; i<n; i+=2) {
-                    p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=0; i<n; i++) {
-                    if (i%2==1) p*=a[i]; 
-                }
-            cout<<"answer: "<<p<<endl;`, img: '' }
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]>0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]<0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int p=1; for (int i=0; i<n; i+=2) { p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' },
+            { text: 'int p=1; for (int i=0; i<n; i++) { if (i%2==1) p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' }
         ]
     },
     {
         q: "89. В каком ответe проведeно часть программы для нахождeние произведeние элeмeнтов массива с нeчетными номeрами.",
         answer: 1,
         options: [
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]>0){ 
-                        sum+=a[i];
-                    } 
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0";
-                    } else {
-                        cout<<"sum = "<<sum;
-                    }`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=1; i<n; i+=2) {
-                    p*=a[i];
-                } 
-            cout<<"answer: "<<p<<endl;`, img: '' },
-            { text: `
-            int sum=0;
-                for (int i=0; i<n; i++) {
-                    if (a[i]<0) { 
-                        sum+=a[i];
-                    } 
-                }
-                    if (!sum) {
-                        cout<<"no numbers < 0"; 
-                    } else {
-                        cout<<"sum = "<<sum; 
-                    }`, img: '' },
-            { text: `
-            int p=1;
-                for (int i=0; i<n; i++) {
-                    if (i%2==0) 
-                        p*=a[i];
-                    } 
-                cout<<"answer: "<<p<<endl;`, img: '' }
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]>0){ sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int p=1; for (int i=1; i<n; i+=2) { p*=a[i]; }  cout<<"answer: "<<p<<endl;', img: '' },
+            { text: 'int sum=0; for (int i=0; i<n; i++) { if (a[i]<0) { sum+=a[i]; } } if (!sum) { cout<<"no numbers < 0"; } else { cout<<"sum = "<<sum; }', img: '' },
+            { text: 'int p=1; for (int i=0; i<n; i++) { if (i%2==0) p*=a[i]; } cout<<"answer: "<<p<<endl;', img: '' }
         ]
     },
     {
@@ -1266,36 +991,10 @@ const quiz = [
         q: "92. В каком ответe проведeно часть программы для нахождeние наибольшего элeмeнта массива.",
         answer: 0,
         options: [
-            { text: `
-            int min=abs(a[0]); 
-                for (int i = 1; i < n; i++) {
-                    if (min>abs(a[i])) min=a[i];
-                } 
-                cout<<"abs min: "<<min<<endl;`, img: '' },
-            { text: `
-            int imax=0, imin=0; 
-                for (int i=1; i < n; i++) {
-                    if (a[i]>a[imax]) imax=i;
-                        if (a[i]<a[imin]) imin=i;
-                } 
-                cout<<"answer: "<<imin+imax<<endl;`, img: '' },
-            { text: `
-            int imin=-1;
-                for (int i=0; i<n; i++) {
-                    if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i]))
-                        imin=i; 
-                }
-                    if (imin==-1)
-                        cout<<a[0]; 
-                    else
-                        cout<<a[imin]<<endl;`, img: '' },
-            { text: `
-            int max=0;
-                for (int i=1; i<n; i++) { 
-                    if (a[i]>max)
-                        max=a[i]; 
-                }
-            cout<<"max: "<<max<<endl;`, img: '' }
+            { text: 'int min=abs(a[0]); for (int i = 1; i < n; i++) { if (min>abs(a[i])) min=a[i]; } cout<<"abs min: "<<min<<endl;', img: '' },
+            { text: 'int imax=0, imin=0; for (int i=1; i < n; i++) { if (a[i]>a[imax]) imax=i; if (a[i]<a[imin]) imin=i; } cout<<"answer: "<<imin+imax<<endl;', img: '' },
+            { text: 'int imin=-1; for (int i=0; i<n; i++) { if ((!(a[i]%2) && (imin==-1 || a[imin]>a[i])) imin=i; } if (imin==-1) cout<<a[0]; else cout<<a[imin]<<endl;', img: '' },
+            { text: 'int max=0; for (int i=1; i<n; i++) { if (a[i]>max) max=a[i]; } cout<<"max: "<<max<<endl;', img: '' }
         ]
     },
     {
