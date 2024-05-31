@@ -269,7 +269,7 @@ const quiz = [
     {
         q: "24. В какой строкe приводится рeзультат программы?",
         img: "Question/24/24.jpg",
-        answer: 0,
+        answer: 1,
         options: [
             { text: '10 2', img: '' },
             { text: '10 1', img: '' },
