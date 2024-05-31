@@ -303,7 +303,7 @@ const quiz = [
     {
         q: "27. Каким будeт рeзультат программы?",
         img: "Question/27/27.jpg",
-        answer: 1,
+        answer: 0,
         options: [
             { text: '2 8', img: '' },
             { text: '8 2', img: '' },
